@@ -7,6 +7,12 @@ const IconWhatsApp = ({ className = "w-4 h-4" }) => (
   </svg>
 );
 
+const IconTelegram = ({ className = "w-4 h-4" }) => (
+  <svg className={className} fill="currentColor" viewBox="0 0 24 24">
+    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z" />
+  </svg>
+);
+
 const IconInstagram = ({ className = "w-4 h-4" }) => (
   <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
     <rect x="2" y="2" width="20" height="20" rx="5" strokeWidth={1.8} />
@@ -48,7 +54,7 @@ export default function Footer() {
 
             <div className="flex flex-wrap items-center gap-3 pt-2">
               <a
-                href="https://wa.me/919999999999?text=Hi%20Ameena%20Couture,%20I%20want%20to%20book%20a%20private%20bridal%20consultation"
+                href="https://wa.me/919390562826?text=Hi%20Ameena%20Couture,%20I%20want%20to%20book%20a%20private%20bridal%20consultation"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500 hover:text-white transition-all text-xs font-bold uppercase tracking-wider shadow-lg group"
@@ -56,6 +62,17 @@ export default function Footer() {
               >
                 <IconWhatsApp className="w-4 h-4 text-emerald-400 group-hover:text-white transition-colors" />
                 <span>WhatsApp Atelier</span>
+              </a>
+
+              <a
+                href="https://t.me/wedding_cuture_by_ameena"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-400 hover:bg-sky-500 hover:text-white transition-all text-xs font-bold uppercase tracking-wider shadow-lg group"
+                aria-label="Telegram"
+              >
+                <IconTelegram className="w-4 h-4 text-sky-400 group-hover:text-white transition-colors" />
+                <span>Telegram</span>
               </a>
 
               <a
@@ -108,7 +125,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2.5 text-white/90 font-mono text-xs">
                 <span className="text-gold-light font-bold">PHONE:</span>
-                <span>+91 99999 99999</span>
+                <a href="tel:+919390562826" className="hover:text-gold-light transition-colors">+91 93905 62826</a>
               </li>
             </ul>
           </div>

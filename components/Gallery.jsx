@@ -234,7 +234,7 @@ export default function Gallery({ items }) {
 
           <div className="flex items-center gap-3">
             <a
-              href="https://wa.me/919999999999?text=Hi%20Ameena%20Couture,%20I%20am%20interested%20in%20this%20bridal%20outfit"
+              href="https://wa.me/919390562826?text=Hi%20Ameena%20Couture,%20I%20am%20interested%20in%20this%20bridal%20outfit"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:inline-flex items-center gap-2.5 px-6 py-2.5 rounded-full bg-gold-gradient text-white text-xs font-bold uppercase tracking-[0.2em] shadow-xl shadow-gold/20 hover:scale-105 transition-all border border-white/20"

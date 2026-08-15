@@ -290,7 +290,7 @@ export default function Home() {
               <span>Explore Our Work</span>
             </Link>
             <a
-              href="https://wa.me/919999999999?text=Hi%20Ameena%20Couture,%20I%20want%20to%20book%20a%20private%20bridal%20consultation"
+              href="https://wa.me/919390562826?text=Hi%20Ameena%20Couture,%20I%20want%20to%20book%20a%20private%20bridal%20consultation"
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 text-[10px] sm:text-xs uppercase tracking-wider sm:tracking-[0.2em] font-bold text-[#2a2420] hover:text-gold-dark transition-colors border-b-2 border-gold/50 pb-1 group self-center whitespace-nowrap"
@@ -706,7 +706,7 @@ export default function Home() {
 
               <div className="pt-2">
                 <Link
-                  href="https://wa.me/919999999999?text=Hi%20Ameena%20Couture,%20I%20want%20to%20book%20a%20private%20bridal%20consultation"
+                  href="https://wa.me/919390562826?text=Hi%20Ameena%20Couture,%20I%20want%20to%20book%20a%20private%20bridal%20consultation"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-7 sm:px-10 py-3.5 sm:py-4 rounded-full bg-gold-gradient text-white text-xs font-bold uppercase tracking-[0.2em] shadow-xl shadow-gold/30 hover:scale-105 transition-all group border border-white/20 text-center"

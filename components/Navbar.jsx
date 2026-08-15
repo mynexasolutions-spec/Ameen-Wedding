@@ -12,6 +12,12 @@ const IconWhatsApp = ({ className = "w-4 h-4" }) => (
   </svg>
 );
 
+const IconTelegram = ({ className = "w-4 h-4" }) => (
+  <svg className={className} fill="currentColor" viewBox="0 0 24 24">
+    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z" />
+  </svg>
+);
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -106,10 +112,10 @@ export default function Navbar() {
             </div>
 
             <a
-              href="https://wa.me/919999999999?text=Hi%20Ameena%20Couture,%20I%20want%20to%20book%20a%20private%20bridal%20consultation"
+              href="https://wa.me/919390562826?text=Hi%20Ameena%20Couture,%20I%20want%20to%20book%20a%20private%20bridal%20consultation"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full inline-flex items-center justify-center gap-2.5 py-4 px-6 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold uppercase tracking-[0.18em] shadow-lg text-center border border-emerald-400/40"
+              className="w-full inline-flex items-center justify-center gap-2.5 py-3.5 px-6 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold uppercase tracking-[0.18em] shadow-lg text-center border border-emerald-400/40"
               onClick={() => setOpen(false)}
             >
               <IconWhatsApp className="w-4 h-4 text-white flex-shrink-0" />
@@ -117,10 +123,21 @@ export default function Navbar() {
             </a>
 
             <a
+              href="https://t.me/wedding_cuture_by_ameena"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full inline-flex items-center justify-center gap-2.5 py-3 px-6 rounded-full bg-[#0088cc] hover:bg-[#0077b5] text-white text-xs font-bold uppercase tracking-[0.18em] shadow-lg text-center border border-sky-400/40"
+              onClick={() => setOpen(false)}
+            >
+              <IconTelegram className="w-4 h-4 text-white flex-shrink-0" />
+              <span className="whitespace-nowrap">Telegram Channel</span>
+            </a>
+
+            <a
               href="https://www.instagram.com/wedding_couture_by_ameena?igsh=MW1vOXR5d3RiaXY2eA=="
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-full bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 text-white text-[11px] font-bold uppercase tracking-wider text-center shadow-md"
+              className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-full bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 text-white text-[11px] font-bold uppercase tracking-wider text-center shadow-md"
             >
               <span>@wedding_couture_by_ameena</span>
             </a>
@@ -173,7 +190,7 @@ export default function Navbar() {
         {/* Action Buttons & Mobile Toggle */}
         <div className="flex items-center gap-3">
           <a
-            href="https://wa.me/919999999999?text=Hi%20Ameena%20Couture,%20I%20want%20to%20book%20a%20private%20bridal%20consultation"
+            href="https://wa.me/919390562826?text=Hi%20Ameena%20Couture,%20I%20want%20to%20book%20a%20private%20bridal%20consultation"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:inline-flex items-center gap-2.5 px-6 py-2.5 rounded-full bg-gold-gradient text-white text-xs font-bold uppercase tracking-[0.18em] shadow-lg shadow-gold/30 hover:scale-105 transition-all duration-300 ring-2 ring-white/40"
