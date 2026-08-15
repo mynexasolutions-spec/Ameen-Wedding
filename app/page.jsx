@@ -216,9 +216,8 @@ function RevealOnScroll({ children, className = "", delay = 0 }) {
   return (
     <div
       ref={domRef}
-      className={`transition-all duration-1000 ease-out transform ${
-        isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-12 scale-[0.97]"
-      } ${className}`}
+      className={`transition-all duration-1000 ease-out transform ${isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-12 scale-[0.97]"
+        } ${className}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
       {children}
@@ -302,10 +301,10 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Hero Visual Display & 6-Slide Gallery */}
-        <div className="md:col-span-5 relative mt-4 md:mt-0 animate-fade-in-up">
+        {/* Hero Visual Display & 5-Slide Gallery */}
+        <div className="md:col-span-5 relative mt-4 md:mt-0 animate-fade-in-up flex flex-row items-stretch gap-2.5 sm:gap-3.5 w-full h-[440px] sm:h-[620px]">
           {/* Main Visual Display Frame */}
-          <div className="relative h-[440px] sm:h-[620px] w-full rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden border-2 border-gold/40 shadow-2xl gold-glow shine-effect group bg-[#090705]">
+          <div className="relative h-full flex-1 rounded-[1.8rem] sm:rounded-[2.5rem] overflow-hidden border-2 border-gold/40 shadow-2xl gold-glow shine-effect group bg-[#090705]">
             {/* Cross-fading Hero Images */}
             {heroSlides.map((slide, idx) => (
               <Image
@@ -314,38 +313,36 @@ export default function Home() {
                 alt={slide.title}
                 fill
                 priority={idx === 0}
-                sizes="(min-width: 768px) 40vw, 100vw"
-                className={`object-cover object-top transition-all duration-1000 ease-in-out group-hover:scale-105 ${
-                  currentSlide === idx ? "opacity-100 scale-100" : "opacity-0 scale-105"
-                }`}
+                sizes="(min-width: 768px) 40vw, 85vw"
+                className={`object-cover object-top transition-all duration-1000 ease-in-out group-hover:scale-105 ${currentSlide === idx ? "opacity-100 scale-100" : "opacity-0 scale-105"
+                  }`}
               />
             ))}
 
             {/* Dark Luxury Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-95 p-5 sm:p-7 flex flex-col justify-end text-white z-10">
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.25em] sm:tracking-[0.3em] text-gold-light font-bold flex items-center gap-1.5">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-95 p-4 sm:p-7 flex flex-col justify-end text-white z-10">
+              <div className="flex items-center justify-between mb-1.5 sm:mb-2">
+                <span className="text-[8px] sm:text-[10px] uppercase tracking-[0.2em] sm:tracking-[0.3em] text-gold-light font-bold flex items-center gap-1">
                   <span className="w-1.5 h-1.5 rounded-full bg-gold" />
                   <span>{activeHero.tag}</span>
                 </span>
-                <span className="text-[9px] sm:text-[10px] font-mono bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white font-bold border border-white/30">
+                <span className="text-[8px] sm:text-[10px] font-mono bg-white/20 backdrop-blur-md px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-white font-bold border border-white/30">
                   {activeHero.edition}
                 </span>
               </div>
 
-              <h3 className="text-lg sm:text-2xl font-serif font-bold text-white leading-tight transition-all duration-500 drop-shadow-md">
+              <h3 className="text-sm sm:text-2xl font-serif font-bold text-white leading-tight transition-all duration-500 drop-shadow-md">
                 {activeHero.title}
               </h3>
 
               {/* Slide Progress Indicators */}
-              <div className="flex items-center gap-2 pt-3 sm:pt-4">
+              <div className="flex items-center gap-1.5 sm:gap-2 pt-2.5 sm:pt-4">
                 {heroSlides.map((_, idx) => (
                   <button
                     key={idx}
                     onClick={() => setCurrentSlide(idx)}
-                    className={`h-1.5 rounded-full transition-all duration-500 ${
-                      currentSlide === idx ? "w-7 sm:w-9 bg-gold-gradient shadow-lg" : "w-2 bg-white/40 hover:bg-white"
-                    }`}
+                    className={`h-1.5 rounded-full transition-all duration-500 ${currentSlide === idx ? "w-5 sm:w-9 bg-gold-gradient shadow-lg" : "w-2 bg-white/40 hover:bg-white"
+                      }`}
                     aria-label={`Go to hero slide ${idx + 1}`}
                   />
                 ))}
@@ -353,27 +350,26 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Interactive 6-Photo Thumbnail Ribbon */}
-          <div className="flex items-center gap-2 pt-4 sm:pt-5 overflow-x-auto no-scrollbar pb-1">
+          {/* 5-Photo Thumbnail Column on the Right Side (Equal Height to Main Image) */}
+          <div className="flex flex-col items-center justify-between gap-1.5 sm:gap-2.5 h-full flex-shrink-0">
             {heroSlides.map((slide, idx) => (
               <button
                 key={`${slide.img}-${idx}`}
                 onClick={() => setCurrentSlide(idx)}
-                className={`relative w-14 h-18 sm:w-20 sm:h-24 rounded-xl overflow-hidden border-2 transition-all duration-300 flex-shrink-0 ${
-                  currentSlide === idx
-                    ? "border-gold scale-105 shadow-xl shadow-gold/30 ring-2 ring-white/50"
-                    : "border-gold/30 opacity-60 hover:opacity-100 hover:scale-100"
-                }`}
+                className={`relative w-12 sm:w-16 h-[18%] rounded-lg sm:rounded-xl overflow-hidden border-2 transition-all duration-300 ${currentSlide === idx
+                  ? "border-gold scale-105 shadow-xl shadow-gold/30 ring-2 ring-white/50"
+                  : "border-gold/30 opacity-60 hover:opacity-100 hover:scale-100"
+                  }`}
               >
                 <Image
                   src={slide.img}
                   alt={`Thumbnail ${idx + 1}`}
                   fill
-                  sizes="80px"
+                  sizes="64px"
                   className="object-cover object-top"
                 />
                 <div className="absolute inset-0 bg-black/20" />
-                <span className="absolute bottom-1 right-1 text-[8px] font-mono font-bold text-white bg-black/70 px-1 rounded">
+                <span className="absolute bottom-0.5 right-0.5 text-[7px] sm:text-[8px] font-mono font-bold text-white bg-black/70 px-1 rounded">
                   0{idx + 1}
                 </span>
               </button>
@@ -411,12 +407,12 @@ export default function Home() {
                 <span className="text-[10px] uppercase tracking-[0.2em] text-[#2a2420] font-bold">Categories</span>
               </div>
               <Link
-              href="/work"
-              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 sm:px-7 sm:py-3.5 rounded-full bg-gold-gradient text-white text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] shadow-lg shadow-gold/30 hover:scale-105 transition-all group ring-2 ring-white/40 text-center whitespace-nowrap self-start sm:self-auto"
-            >
-              <span>View All Outfits</span>
-              <IconArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-            </Link>
+                href="/work"
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 sm:px-7 sm:py-3.5 rounded-full bg-gold-gradient text-white text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] shadow-lg shadow-gold/30 hover:scale-105 transition-all group ring-2 ring-white/40 text-center whitespace-nowrap self-start sm:self-auto"
+              >
+                <span>View All Outfits</span>
+                <IconArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+              </Link>
             </div>
           </div>
         </RevealOnScroll>
