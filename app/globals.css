@@ -161,3 +161,10 @@ body {
   animation: floatSlow 5s ease-in-out infinite;
 }
 
+/* Hide video volume controls */
+video::-webkit-media-controls-volume-control-container,
+video::-webkit-media-controls-mute-button,
+video::-webkit-media-controls-volume-slider {
+  display: none !important;
+}
+

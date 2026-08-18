@@ -137,6 +137,10 @@ function GalleryItemCard({ item, index, onClick }) {
               onLoadedMetadata={(e) => {
                 e.currentTarget.currentTime = 0.1;
               }}
+              onVolumeChange={(e) => {
+                e.currentTarget.muted = true;
+                e.currentTarget.volume = 0;
+              }}
               className="w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-110"
             />
             {/* Live Motion Film Badge */}
@@ -275,8 +279,14 @@ export default function Gallery({ items }) {
             <video
               src={currentItem.src}
               controls
+              controlsList="novolume"
               autoPlay
+              muted
               playsInline
+              onVolumeChange={(e) => {
+                e.currentTarget.muted = true;
+                e.currentTarget.volume = 0;
+              }}
               className="max-w-full max-h-[78vh] sm:max-h-[80vh] w-auto h-auto object-contain rounded-2xl shadow-2xl border border-white/20"
             />
           ) : (

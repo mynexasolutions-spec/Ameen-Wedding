@@ -271,7 +271,7 @@ export default function Home() {
           {/* Stat Badges */}
           <div className="grid grid-cols-3 gap-2 sm:gap-4 max-w-md pt-1 sm:pt-2">
             {[
-              { num: "500+", label: "Happy Brides" },
+              { num: "2000+", label: "Happy Brides" },
               { num: "100%", label: "Hand Work" },
               { num: "15+", label: "Years Experience" },
             ].map((st) => (
